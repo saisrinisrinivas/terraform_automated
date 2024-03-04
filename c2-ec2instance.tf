@@ -13,5 +13,8 @@
 resource "aws_instance" "ec2demo" {
   ami           = "ami-0440d3b780d96b29d" # Amazon Linux in us-east-1, update as per your region
   instance_type = "t2.micro"
+  tags = {
+    "Name" = "EC2 Demo"
+  }
   
 }
