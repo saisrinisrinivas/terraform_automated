@@ -13,6 +13,7 @@
 resource "aws_instance" "ec2demo" {
   ami           = "ami-0440d3b780d96b29d" # Amazon Linux in us-east-1, update as per your region
   instance_type = "t2.micro"
+  user_data = file("${path.module}/app1-install.sh")
   tags = {
     "Name" = "EC2 Demo"
   }
