@@ -1,5 +1,11 @@
 # Terraform Settings Block
 terraform {
+  backend "remote" {
+    bucket = "my-terraform-bucket"
+    key    = "terraformstate/terraform.tfstate"
+    region = "us-east-1"
+    
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
