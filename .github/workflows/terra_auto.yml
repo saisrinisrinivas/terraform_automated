@@ -35,5 +35,5 @@ jobs:
         if: github.event.pull_request.merged == true
         run: terraform apply -auto-approve
       
-      - name: Destroy Terraform
-        run: terraform destroy -auto-approve
+      # - name: Destroy Terraform
+      #   run: terraform destroy -auto-approve
