@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "terraform_bucket" {
-  bucket = "my-terraform-bucket"
+  bucket = "my0689-terraform-bucket"
 
   tags = {
-    Name        = "my-terraform-bucket"
+    Name        = "my0689-terraform-bucket"
   }
 }
