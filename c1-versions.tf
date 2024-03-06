@@ -1,6 +1,6 @@
 # Terraform Settings Block
 terraform {
-  backend "remote" {
+  backend "s3" {
     bucket = "my-terraform-bucket"
     key    = "terraformstate/terraform.tfstate"
     region = "us-east-1"
