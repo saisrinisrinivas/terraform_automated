@@ -14,6 +14,6 @@ terraform {
 }
 module "ec2_instance" {
     source = "./modules/ec2-instances"
-    instance_type_map = "prod"
+    instance_type = var.instance_type_map["prod"]
 
 }
