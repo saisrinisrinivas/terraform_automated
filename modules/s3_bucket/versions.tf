@@ -1,4 +1,3 @@
-# # Terraform Settings Block
 # terraform {
 #   backend "s3" {
 #     bucket = "srinis-terra-bucket"

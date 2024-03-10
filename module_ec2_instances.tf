@@ -1,4 +1,10 @@
 terraform {
+  backend "s3" {
+    bucket = "srinis-terra-bucket"
+    key    = "terraformstate/terraform.tfstate"
+    region = "us-east-1"
+    
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -6,9 +12,8 @@ terraform {
     }
   }
 }
-
 module "ec2_instance" {
-    source = ".modules/ec2-instances/c2-ec2instance.tf"
+    source = "./modules/ec2-instances"
     instance_type = "t2.large"
 
 }
