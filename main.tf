@@ -1,4 +1,3 @@
-# Terraform Settings Block
 terraform {
   required_providers {
     aws = {
@@ -6,4 +5,10 @@ terraform {
       version = "~> 5.0" # Optional but recommended in production
     }
   }
+}
+
+module "ec2_instance" {
+    source = "./modules/ec2-instances/c1-versions.tf"
+    instance_type = "t2.large"
+
 }
