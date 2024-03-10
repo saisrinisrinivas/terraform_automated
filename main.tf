@@ -8,7 +8,7 @@ terraform {
 }
 
 module "ec2_instance" {
-    source = "./modules/ec2-instances/c2-versions.tf"
+    source = ".modules/ec2-instances/c2-ec2instance.tf"
     instance_type = "t2.large"
 
 }
