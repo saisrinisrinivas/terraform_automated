@@ -1,10 +1,10 @@
 terraform {
-  backend "s3" {
-    bucket = "heyhi_Sai_Srini_Viji_123"
-    key    = "terraformstate/terraform.tfstate"
-    region = "us-east-1"
+  # backend "s3" {
+  #   bucket = "heyhi_Sai_Srini_Viji_123"
+  #   key    = "terraformstate/terraform.tfstate"
+  #   region = "us-east-1"
     
-  }
+  # }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
