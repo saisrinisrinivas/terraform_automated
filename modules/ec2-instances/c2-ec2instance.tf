@@ -1,13 +1,3 @@
-# # Terraform Settings Block
-# terraform {
-#   required_providers {
-#     aws = {
-#       source  = "hashicorp/aws"
-#       version = "~> 5.0" # Optional but recommended in production
-#     }
-#   }
-# }
-
 
 # Resource Block
 resource "aws_instance" "ec2demo" {
