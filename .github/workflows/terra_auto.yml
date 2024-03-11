@@ -36,4 +36,4 @@ jobs:
       #   run: terraform apply -auto-approve 
       
       - name: Destroy Terraform
-        run: terraform destroy -auto-approve -target=aws_s3_bucket.terraform_bucket 
+        run: terraform destroy -auto-approve
