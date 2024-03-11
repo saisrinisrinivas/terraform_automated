@@ -25,3 +25,8 @@ variable "instance_type_map" {
     }
   
 }
+
+variable "bucket_name" {
+  description = "name of the bucket"
+  default = "heyhisaisriniviji1234"
+}
