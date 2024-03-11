@@ -14,13 +14,13 @@ output "instance_publicdns" {
 
 output "for_output_list" {
   description = "For loop with lists"
-  value = [for ins in aws_aws_instance.ec2demo: ins.public_ip]
+  value = [for ins in aws_instance.ec2demo: ins.public_ip]
   
 }
 
 output "for_output_map" {
   description = "For loop with map"
-  value = {for ins in aws_aws_instance.ec2demo: ins.id => ins.public_ip}
+  value = {for ins in aws_instance.ec2demo: ins.id => ins.public_ip}
   
 }
 
