@@ -23,3 +23,8 @@ output "for_output_map" {
   value = {for ins in aws_aws_instance.ec2demo: ins.id => ins.public_ip}
   
 }
+
+output "latest_splat_operator"{
+  description = "Generalized latest splat operator"
+  value = aws_instance.ec2demo[*].public_dns
+}
