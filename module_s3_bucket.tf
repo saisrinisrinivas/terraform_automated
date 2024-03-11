@@ -1,5 +1,5 @@
 
 module "s3_buckets" {
     source = "./modules/s3_bucket"
-    bucket_name = "heyhisaisriniviji1234"
+    bucket_name = "heyhisaisriniviji12345"
 }
