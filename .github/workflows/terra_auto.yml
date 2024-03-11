@@ -29,11 +29,11 @@ jobs:
         run: terraform init
 
       - name: Plan Terraform
-        run: terraform plan -lock=false
+        run: terraform plan 
 
       - name: Apply Terraform
         if: github.event.pull_request.merged == true
-        run: terraform apply -auto-approve -lock=false
+        run: terraform apply -auto-approve 
       
       - name: Destroy Terraform
         run: terraform destroy -auto-approve -target=aws_s3_bucket.terraform_bucket -lock=false
