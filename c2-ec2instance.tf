@@ -1,4 +1,3 @@
-
 # Resource Block
 resource "aws_instance" "ec2demo" {
   ami           = data.aws_ami.amzlinux2.id # Amazon Linux in us-east-1, update as per your region
