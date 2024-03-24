@@ -14,7 +14,7 @@ resource "aws_instance" "ec2demo" {
   vpc_security_group_ids = [ aws_security_group.vpc-ssh.id, aws_security_group.vpc-web.id]
   user_data = file("${path.module}/app1-install.sh")
   # count = 2
-  for_each = data.aws_availability_zones.my_azones.names
+  for_each = toset(data.aws_availability_zones.my_azones.names)
   tags = {
     "Name" = "For-Each-Demo-${each.key}"
    }
