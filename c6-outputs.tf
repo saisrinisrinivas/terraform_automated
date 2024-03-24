@@ -31,12 +31,12 @@
 
 output "for_each_dns" {
   description = "Using for_each to output the public_dns"
-  value = toset([for instance in aws_instance.ec2_demo: instance.public_dns])
+  value = toset([for instance in aws_instance.ec2demo: instance.public_dns])
   
 }
 
 output "for_each_ip" {
   description = "Using for_each to output the public_dns"
-  value = toset([for instance in aws_instance.ec2_demo: instance.public_ip])
+  value = toset([for instance in aws_instance.ec2demo: instance.public_ip])
   
 }
